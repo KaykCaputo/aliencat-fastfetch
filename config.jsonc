@@ -3,97 +3,136 @@
 
     "logo": {
         "source": "$HOME/.config/fastfetch/ascii.txt",
-        "padding": { "top": 3, "left": 10 }
+        "padding": { "top": 1, "left": 2, "right": 4 },
+        "type": "auto",
+        "height": 16,
+        "width": 28
     },
 
-    "display": { "separator": " " },
+    "display": {
+        "separator": " ",
+        "color": {
+            "title": "38;2;80;200;255"
+        }
+    },
 
     "modules": [
         "break",
+        {
+            "type": "title",
+            "format": "   \u001b[38;2;80;200;255m{user} \u001b[38;2;100;100;100m@ \u001b[38;2;120;255;180m{host-name}"
+        },
+        "break",
 
         {
             "type": "custom",
-            "format":
-                "\u001b[38;2;120;255;180m╔═══════════════════════  \u001b[38;2;80;200;255mHardware \u001b[38;2;60;170;255m ═══════════════════════╗"
+            "format": "\u001b[38;2;80;200;255m╭─  Hardware"
+        },
+        {
+            "type": "host",
+            "key": "\u001b[38;2;80;200;255m├─ \u001b[38;2;120;255;180m Host",
+            "keyColor": "default"
+        },
+        {
+            "type": "cpu",
+            "key": "\u001b[38;2;80;200;255m├─ \u001b[38;2;120;255;180m CPU ",
+            "keyColor": "default"
+        },
+        {
+            "type": "gpu",
+            "key": "\u001b[38;2;80;200;255m├─ \u001b[38;2;120;255;180m GPU ",
+            "keyColor": "default"
+        },
+        {
+            "type": "disk",
+            "key": "\u001b[38;2;80;200;255m├─ \u001b[38;2;120;255;180m Disk",
+            "keyColor": "default"
+        },
+        {
+            "type": "memory",
+            "key": "\u001b[38;2;80;200;255m╰─ \u001b[38;2;120;255;180m Mem ",
+            "keyColor": "default"
         },
 
-        { "type": "host",    "key": "║   Host       ",   "keyColor": "green",   "keyWidth": 20 },
-        { "type": "cpu",     "key": "║   CPU        ",   "keyColor": "green",   "keyWidth": 20 },
-        { "type": "gpu",     "key": "║   GPU        ",   "keyColor": "green",   "keyWidth": 20 },
-        { "type": "memory",  "key": "║   Memory     ",   "keyColor": "green",   "keyWidth": 20 },
-        { "type": "disk",    "key": "║   Storage    ",   "keyColor": "green",   "keyWidth": 20 },
+
+        "break",
 
         {
             "type": "custom",
-            "format":
-                "\u001b[38;2;120;255;180m╚══════════════════════════════════════════════════════════════════════╝"
+            "format": "\u001b[38;2;80;200;255m╭─  Software"
+        },
+        {
+            "type": "os",
+            "key": "\u001b[38;2;80;200;255m├─ \u001b[38;2;120;255;180m OS  ",
+            "keyColor": "default"
+        },
+        {
+            "type": "kernel",
+            "key": "\u001b[38;2;80;200;255m├─ \u001b[38;2;120;255;180m Kern",
+            "keyColor": "default"
+        },
+        {
+            "type": "packages",
+            "key": "\u001b[38;2;80;200;255m├─ \u001b[38;2;120;255;180m󰏖 Pkgs",
+            "format": "{all}",
+            "keyColor": "default"
+        },
+        {
+            "type": "shell",
+            "key": "\u001b[38;2;80;200;255m╰─ \u001b[38;2;120;255;180m Shell",
+            "keyColor": "default"
         },
 
         "break",
 
         {
             "type": "custom",
-            "format":
-                "\u001b[38;2;120;255;180m╔═══════════════════════  \u001b[38;2;80;200;255mSoftware \u001b[38;2;60;170;255m ═══════════════════════╗"
+            "format": "\u001b[38;2;80;200;255m╭─  Desktop"
         },
-
-        { "type": "os",       "key": "║   OS         ",   "keyColor": "green", "keyWidth": 20 },
-        { "type": "kernel",   "key": "║   Kernel     ",   "keyColor": "green", "keyWidth": 20 },
-        { "type": "bios",     "key": "║  󰍛 BIOS            ",   "keyColor": "green", "keyWidth": 20 },
-        { "type": "packages", "key": "║  󰏖 Packages   ",   "keyColor": "green", "keyWidth": 20 },
-        { "type": "shell",    "key": "║   Shell      ",   "keyColor": "green", "keyWidth": 20 },
-
         {
-            "type": "custom",
-            "format":
-                "\u001b[38;2;120;255;180m╚══════════════════════════════════════════════════════════════════════╝"
+            "type": "de",
+            "key": "\u001b[38;2;80;200;255m├─ \u001b[38;2;120;255;180m DE  ",
+            "keyColor": "default"
+        },
+        {
+            "type": "wm",
+            "key": "\u001b[38;2;80;200;255m├─ \u001b[38;2;120;255;180m WM  ",
+            "keyColor": "default"
+        },
+        {
+            "type": "terminal",
+            "key": "\u001b[38;2;80;200;255m╰─ \u001b[38;2;120;255;180m Term",
+            "keyColor": "default"
         },
 
         "break",
 
         {
             "type": "custom",
-            "format":
-                "\u001b[38;2;120;255;200m╔═══════════════════════  \u001b[38;2;80;220;255mDesktop \u001b[38;2;60;180;255m ═══════════════════════╗"
+            "format": "\u001b[38;2;80;200;255m╭─  Time"
         },
-
-        { "type": "de",       "key": "║   Desktop Env ",   "keyColor": "green", "keyWidth": 20 },
-        { "type": "lm",       "key": "║   LoginMgr    ",   "keyColor": "green", "keyWidth": 20 },
-        { "type": "wm",       "key": "║   WM          ",   "keyColor": "green", "keyWidth": 20 },
-        { "type": "wmtheme",  "key": "║  󰉼 Theme       ",   "keyColor": "green", "keyWidth": 20 },
-        { "type": "terminal", "key": "║   Terminal    ",   "keyColor": "green", "keyWidth": 20 },
-
-        {
-            "type": "custom",
-            "format":
-                "\u001b[38;2;120;255;200m╚══════════════════════════════════════════════════════════════════════╝"
-        },
-
-        "break",
-
-        {
-            "type": "custom",
-            "format":
-                "\u001b[38;2;120;255;180m╔═══════════════════  \u001b[38;2;80;200;255mTime & Date \u001b[38;2;60;170;255m ════════════════════╗"
-        },
-
         {
             "type": "command",
-            "key": "║   OS Age     ",
-            "keyColor": "green",
-            "text": "birth=$(stat -c %W /); now=$(date +%s); diff=$((now - birth)); days=$((diff/86400)); echo $days 'days'"
+            "key": "\u001b[38;2;80;200;255m├─ \u001b[38;2;120;255;180m Age ",
+            "keyColor": "default",
+            "text": "birth=$(stat -c %W / 2>/dev/null || echo 0); if [ \"$birth\" -eq 0 ]; then echo \"Unknown\"; else now=$(date +%s); diff=$((now - birth)); days=$((diff/86400)); echo \"$days days\"; fi"
         },
-
-        { "type": "uptime",   "key": "║  󰅐 Uptime     ", "keyColor": "green" },
-        { "type": "datetime", "key": "║  󰃰 Date/Time  ", "keyColor": "green" },
-
         {
-            "type": "custom",
-            "format":
-                "\u001b[38;2;120;255;180m╚══════════════════════════════════════════════════════════════════════╝"
+            "type": "uptime",
+            "key": "\u001b[38;2;80;200;255m╰─ \u001b[38;2;120;255;180m󰅐 Up  ",
+            "keyColor": "default"
         },
 
         "break",
 
+        {
+            "type": "colors",
+            "symbol": "star",
+            "paddingLeft": 0,
+            "block": {
+                "range": [2, 6]
+            }
+        },
+        "break"
     ]
 }
