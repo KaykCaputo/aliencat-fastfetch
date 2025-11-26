@@ -1,5 +1,4 @@
-<img width="986" height="631" alt="image" src="https://github.com/user-attachments/assets/51d7e6bb-6114-4faf-9d9b-ffa6a9e4879c" />
-
+<img width="1001" height="620" alt="image" src="https://github.com/user-attachments/assets/04a70956-2dc3-4d16-8550-78ff9846ccf3" />
 
 -> just paste this files inside your ```~/.config/fastfetch/``` and go meow meow
 
